@@ -39,13 +39,14 @@ class Server:
         assert type(page) == int and type(page_size) == int
         assert page > 0 and page_size > 0
 
-        pages = index_range(page, page_size)
+        start, end = index_range(page, page_size)
         data = self.dataset()
 
-        if pages[1] > len(data):
-            return []
-        else:
-            return data[pages[0]:pages[1]]
+        try:
+            data_set = data[start:end]
+        except IndexError:
+            data_set = []
+        return data_set
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """Returns a dictionary of the metadata for the data returned
