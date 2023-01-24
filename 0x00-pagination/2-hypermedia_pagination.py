@@ -54,10 +54,10 @@ class Server:
         by get_page.
         """
         data = self.get_page(page, page_size)
-        prev_page = None
+        prev_page = page - 1
         next_page = page + 1
-        if page > 1:
-            prev_page = page - 1
+        if page < 1:
+            prev_page = None
         if data == []:
             next_page = None
 
