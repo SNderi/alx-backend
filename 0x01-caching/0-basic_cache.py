@@ -7,9 +7,18 @@ from base_caching import BaseCaching
 
 class BasicCache(BaseCaching):
     """A caching system.
+    Methods: put
+             get
     """
+    def __init__(self):
+        """Initializes the cache's data.
+        """
+        super().__init__(self)
+
     def put(self, key, item):
         """Assigns value to dictionary.
+        Args: Key
+              Item
         """
         if key is None or item is None:
             pass
@@ -17,6 +26,7 @@ class BasicCache(BaseCaching):
 
     def get(self, key):
         """ Retrieves key's value.
+        Args: Key
         """
         if key is None or key not in self.cache_data.keys():
             return None
