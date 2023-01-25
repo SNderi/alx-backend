@@ -10,11 +10,6 @@ class BasicCache(BaseCaching):
     Methods: put
              get
     """
-    def __init__(self):
-        """Initializes the cache's data.
-        """
-        super().__init__(self)
-
     def put(self, key, item):
         """Assigns value to dictionary.
         Args: Key
