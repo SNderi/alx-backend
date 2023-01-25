@@ -19,7 +19,7 @@ class LRUCache(BaseCaching):
         """
         if key is None or item is None:
             pass
-        
+
         self.cache_data[key] = item
         if key in self.frequency:
             self.frequency.remove(key)

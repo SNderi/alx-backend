@@ -22,7 +22,7 @@ class LIFOCache(BaseCaching):
 
         if key in self.cache_data.keys():
             self.last = key
-        
+
         self.cache_data[key] = item
 
         if len(self.cache_data) > super().MAX_ITEMS:
