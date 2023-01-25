@@ -19,7 +19,7 @@ class LFUCache(BaseCaching):
         """
         if key is None or item is None:
             pass
-        
+
         self.cache_data[key] = item
 
         if len(self.cache_data) > super().MAX_ITEMS:
