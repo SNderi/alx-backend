@@ -18,7 +18,7 @@ class LFUCache(BaseCaching):
         """Add key value data to the cache.
         """
         if key is None or item is None:
-            pass
+            return
 
         self.cache_data[key] = item
 

@@ -17,7 +17,7 @@ class FIFOCache(BaseCaching):
         """Add key value data to the cache.
         """
         if key is None or item is None:
-            pass
+            return
         self.cache_data[key] = item
         if len(self.cache_data) > super().MAX_ITEMS:
             del_key = list(self.cache_data.keys())[0]

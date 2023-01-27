@@ -18,7 +18,7 @@ class LIFOCache(BaseCaching):
         """Add key value data to the cache.
         """
         if key is None or item is None:
-            pass
+            return
 
         if key in self.cache_data.keys():
             self.last = key
