@@ -27,7 +27,7 @@ class LRUCache(BaseCaching):
         else:
             self.frequency.append(key)
 
-        if len(self.cache_data) > super().MAX_ITEMS:
+        if len(self.cache_data) > BaseCaching.MAX_ITEMS:
             del_key = self.frequency[0]
             print("Discard: {}".format(del_key))
             del self.cache_data[del_key]

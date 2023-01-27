@@ -22,7 +22,7 @@ class LFUCache(BaseCaching):
 
         self.cache_data[key] = item
 
-        if len(self.cache_data) > super().MAX_ITEMS:
+        if len(self.cache_data) > BaseCaching.MAX_ITEMS:
             del_key = min(self.frequency, key=self.frequency.get)
             print("Discard: {}".format(del_key))
             del self.cache_data[del_key]
