@@ -66,7 +66,7 @@ def get_locale():
 
 
 @app.route('/', strict_slashes=False)
-def hello_world():
+def hello_world() -> str:
     """/ route handler. """
     return render_template('6-index.html')
 
